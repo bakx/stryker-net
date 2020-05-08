@@ -42,7 +42,7 @@ namespace Stryker.Core.Options
         public string OptimizationMode { get; set; }
         public IEnumerable<string> TestProjects { get; set; }
 
-        public string PlatformMsBuild { get; set; }
+        public string MsBuildArguments { get; set; }
 
         public string DashboardUrl { get; } = "https://dashboard.stryker-mutator.io";
         public string DashboardApiKey { get; }
@@ -85,7 +85,7 @@ namespace Stryker.Core.Options
             string moduleName = null,
             string projectVersion = null,
             IEnumerable<string> testProjects = null, 
-            string platformMsBuild = "AnyCPU")
+            string msBuildArguments = "")
         {
             _logger = logger;
             _fileSystem = fileSystem ?? new FileSystem();
@@ -111,7 +111,7 @@ namespace Stryker.Core.Options
             DiffEnabled = diff;
             GitSource = ValidateGitSource(gitSource);
             TestProjects = ValidateTestProjects(testProjects);
-            PlatformMsBuild = platformMsBuild;
+            MsBuildArguments = msBuildArguments;
             (DashboardApiKey, ProjectName, ModuleName, ProjectVersion) = ValidateDashboardReporter(dashboadApiKey, projectName, moduleName, projectVersion);
         }
 
