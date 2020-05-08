@@ -49,7 +49,7 @@ namespace Stryker.Core.Initialisation
             else
             {
                 // Build with dotnet build
-                result = _processExecutor.Start(projectPath, "dotnet", $"build \"{Path.GetFileName(projectPath)}\"");
+                result = _processExecutor.Start(projectPath, "dotnet", $"build \"{Path.GetFileName(projectPath)}\" /p:Platform={platform}");
             }
 
             _logger.LogDebug("Initial build output {0}", result.Output);
