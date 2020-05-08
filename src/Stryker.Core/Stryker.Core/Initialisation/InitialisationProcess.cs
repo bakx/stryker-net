@@ -54,7 +54,8 @@ namespace Stryker.Core.Initialisation
                 _initialBuildProcess.InitialBuild(
                     testProjects[i].TargetFramework == Framework.NetClassic,
                     testProjects[i].ProjectFilePath,
-                    options.SolutionPath);
+                    options.SolutionPath,
+                    options.MsBuildArguments);
             }
 
             if (_testRunner == null)
