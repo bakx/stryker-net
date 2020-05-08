@@ -289,6 +289,14 @@ For example: Your project might be called 'consumer-loans' and it might contains
             JsonKey = "test-projects"
         };
 
+        public static readonly CLIOption<string> PlatformMsBuild = new CLIOption<string>
+        {
+	        ArgumentName = "--platform-msbuild",
+	        ArgumentShortName = "-pm <platform>",
+	        ArgumentDescription = "Sets the platform passed to msbuild | AnyCPU (default)",
+	        DefaultValue = "AnyCPU"
+        };
+
         private static string FormatOptionsString<T, Y>(T @default, IEnumerable<Y> options)
         {
             return FormatOptionsString(new List<T> { @default }, options, new List<Y>());

@@ -22,9 +22,9 @@
       },
       "NuGet.Versioning": {
         "type": "Direct",
-        "requested": "[5.5.0, )",
-        "resolved": "5.5.0",
-        "contentHash": "jH8Q+XRO9REVelfvAUlRnLqrQCNi3NRVLM+MIWY4XW2CMxCD+R/X7cJWVAW7A6rG1FpgO8MbGM8DLwloMgYm0w=="
+        "requested": "[5.5.1, )",
+        "resolved": "5.5.1",
+        "contentHash": "EgKbD8MLKqPV9GwE5B8fse0AbXOHn/6KoLcs0wERL31mftwx4jqIl7xjCs+IVHAw3St5aH8Erq28kZJkmDveGw=="
       },
       "Buildalyzer": {
         "type": "Transitive",
@@ -1399,7 +1399,7 @@
           "Serilog.Extensions.Logging": "3.0.1",
           "Serilog.Extensions.Logging.File": "2.0.0",
           "Serilog.Sinks.Console": "3.1.1",
-          "Stryker.DataCollector": "0.17.1",
+          "Stryker.DataCollector": "0.16.1",
           "System.IO.Abstractions": "11.0.5"
         }
       },
